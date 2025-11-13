@@ -6,7 +6,7 @@ export default function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false); 
 
-  // Função que busca a imagem da API
+  
   const fetchCat = async () => {
     setError("");
     setCatUrl(""); 
@@ -57,7 +57,7 @@ export default function App() {
      
       {loading && <p>Carregando gatinho...</p>}
       
-      {/* Exibe a imagem, se houver uma URL e não estiver carregando */}
+      
       {catUrl && !loading && (
         <img
           src={catUrl}
@@ -71,4 +71,5 @@ export default function App() {
       )}
     </div>
   );
+}
 }
